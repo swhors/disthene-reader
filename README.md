@@ -2,10 +2,10 @@ fixed-disthene-reader:
 =========================================================
 
 This repository is originated from disthene-reader.
-This will help to develop java based graphite metric collector.
-This is like the graphiteapp(https://graphiteapp.org).
+The disthene-reader will help to develop java based graphite metric collector.
+The disthene-reader is like the graphiteapp(https://graphiteapp.org).
 But, in some functions, the result of function is different.
-This repository is aimed on like as graphiteapp.
+This repository is aimed on same as graphiteapp.
 This reposotiry will supply graphite functions like graphiteapp.
 
 swhors@naver.com
