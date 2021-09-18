@@ -1,8 +1,9 @@
-package net.iponweb.disthene.reader.graphite;
+package net.iponweb.disthene.reader.graphite.evaluation;
 
 import net.iponweb.disthene.reader.exceptions.InvalidArgumentException;
 import net.iponweb.disthene.reader.exceptions.InvalidFunctionException;
-import net.iponweb.disthene.reader.graphite.evaluation.EvaluationContext;
+import net.iponweb.disthene.reader.graphite.PathTarget;
+import net.iponweb.disthene.reader.graphite.Target;
 import net.iponweb.disthene.reader.graphite.functions.DistheneFunction;
 import net.iponweb.disthene.reader.graphite.functions.registry.FunctionRegistry;
 import net.iponweb.disthene.reader.graphite.grammar.GraphiteBaseVisitor;
@@ -46,7 +47,7 @@ public class TargetVisitor extends GraphiteBaseVisitor<Target> {
                 } else if (arg instanceof GraphiteParser.ArgNumberContext) {
                     function.addArg(Double.parseDouble(arg.getText()));
                 } else if (arg instanceof GraphiteParser.ArgStringContext) {
-                    function.addArg(arg.getText().replaceAll("^[\"\']|[\"\']$", ""));
+                    function.addArg(arg.getText().replaceAll("^[\"']|[\"']$", ""));
                 }
             }
 
